@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.FluentMap" Version="1.8.0" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+    <PackageReference Include="Dapper" Version="2.0.30" developmentDependency="true" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.30" developmentDependency="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="1_t4EntityHelpersGenerate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>1_t4EntityHelpersGenerate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="1_t4EntityHelpersGenerate.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>1_t4EntityHelpersGenerate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

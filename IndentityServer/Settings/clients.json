@@ -1,0 +1,24 @@
+[
+    {
+        "ClientId": "clientAPI1",
+        "AllowedGrantTypes": [ "client_credentials" ],
+        "ClientSecrets": [
+            {
+                "Value": "ApiNCoreDxApp-secret",
+                "Description": "ApiNCoreDxApp secret"
+            }
+        ],
+        "AllowedScopes": [ "ApiNCoreDxApp" ]
+    },
+    {
+        "ClientId": "ApiNCoreDxAppClient",
+        "AllowedGrantTypes": [ "password" ],
+        "ClientSecrets": [
+            {
+                "Value": "ApiNCoreDxApp-secret",
+                "Description": "ApiNCoreDxApp secret"
+            }
+        ],
+        "AllowedScopes": [ "ApiNCoreDxApp" ]
+    }
+]
